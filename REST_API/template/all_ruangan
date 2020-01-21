@@ -1,0 +1,40 @@
+<div class="container">
+    <h1 class="text-center">Daftar Ruangan</h1>
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Kode</th   >
+                        <th scope="col">Klasifikasi</th>
+                        <th scope="col"> Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if ruangans|length > 0 %}
+                    {% for ruangan in ruangans %}
+                    <tr>
+                        <td>{{ ruangan.kode }}</td>
+                        <td>{{ ruangan.klasifikasi }}</td>
+                        <td><a class="btn btn-info" href="/ruangan/detail/{{ruangan.kode}}" role="button">Detail</a>
+                            <a class="btn btn-danger" href="/ruangan/delete/{{ruangan.kode}}" role="button">Delete</a> 
+                            <a class="btn btn-primary" href="/dokter/edit/{{dokter.id}}" role="button">Edit</a></td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td colspan="6"><i>Tidak ada</i></td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-md-1 mt-2">
+            <div class="text-right">
+                <a href="/ruangan/new" class="btn btn-sm btn-success">Add Ruangan</a>
+            </div>
+        </div>
+    </div>
+</div>
