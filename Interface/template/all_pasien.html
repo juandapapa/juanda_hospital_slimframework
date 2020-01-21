@@ -1,0 +1,57 @@
+<div class="container">
+    <h1 class="text-center">Semua Pasien</h1>
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>No Rekam</th>
+                        <th>Nama</th>       
+                        <th>Jenis Kelamin</th>
+                        <th>Usia</th>
+                        <!-- <th>Agama</th>
+                        <th>Pekerjaan</th> -->
+                        <th>Alamat</th>
+                        <!-- <th>Golongan Darah</th> -->
+                        <th>No Telepon</th>
+                        <th colspan="3" class="text-center ">Actoin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if pasiens|length > 0 %}
+                    {% for pasien in pasiens %}
+                    <tr>
+                        <td>{{pasien.no_rekam_medis}}</td>
+                        <td>{{ pasien.nama }}</td>
+                        <td>{{ pasien.jenis_kelamin }}</td>
+                        <td>{{ pasien.usia }}</td>
+                        <!-- <td>{{ pasien.agama }}</td> -->
+                        <!-- <td>{{ pasien.pekerjaan }}</td> -->
+                        <td>{{ pasien.alamat }}</td>
+                        <!-- <td>{{ pasien.golongan_darah }}</td> -->
+                        <td>{{ pasien.no_telepon}}</td>
+                        <td><a class="btn btn-info" href="/pasien/detail/{{pasien.no_rekam_medis}}" role="button">Detail</a></td>
+                            <!-- <a href="/pasien/detail/{{pasien.no_rekam_medis}}">Detail</a></td> -->
+                       <td><a class="btn btn-danger" href="/pasien/delete/{{pasien.no_rekam_medis}}" role="button">Delete</a></td>
+                       <td><a class="btn btn-primary" href="/pasien/update/{{pasien.no_rekam_medis}}" role="button">Edit</a></td></td>
+                        <!--<td><a href="/order/cancel/{{ order.no }}">cancel</a></td>-->
+                        <!--<td>{% if order.customer_name == user %}<a href="/order/cancel/{{ order.no }}">cancel</a>{% endif %}</td>-->
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td colspan="6"><i>Tidak ada</i></td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-md-1 mt-2">
+            <div class="text-right">
+                <a href="/pasien/new" class="btn btn-sm btn-success">Add Pasien</a>
+            </div>
+        </div>
+    </div>
+</div>
