@@ -1,0 +1,47 @@
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<body>
+
+
+<section>
+    <img class="mySlides" src="img/img5.jpg" style="width:100%">
+    <img class="mySlides" src="img/img4.jpg" style="width:100%">
+    <img class="mySlides" src="img/img3.jpg" style="width:100%">
+  </section>
+<script>var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 3000);
+    }</script>
+
+<section class="w3-container w3-center" style="max-width:600px">
+    <h2 class="w3-wide">Juanda Hospital</h2>
+    <p class="w3-opacity"><i></i></p>
+  </section>
+
+  <section class="w3-container w3-content w3-center" style="max-width:600px">
+    <p class="w3-justify">
+        The mission of Middlesex Health System is to improve the health of the people and communities we serve and to manage illness with skill and compassion. The mission of Middlesex Health Services is to sponsor high quality healthcare-related services that are complementary to those offered by Middlesex Hospital. Middlesex Health Services is a not-for-profit entity. The mission of Middlesex Health Resources is to sponsor high quality healthcare-related services that are complementary to those offered by Middlesex Hospital. Middlesex Health Resources is a for-profit entity, and the Company is involved in the ownership of hospital-related real estate, a hospital collection agency and a home infusion business..</p>
+    </section>
+
+    <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-flickr"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <p class="w3-medium">
+          Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+        </p>
+      </footer>
