@@ -1,0 +1,59 @@
+<div class="container">
+    <h1 class="text-center">Rawat Jalan</h1>
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>ID Antri</th>
+                        <th>ID Pasien</th>
+                        <th>ID Dokter</th>
+                        <th>Tanggal Kunjungan</th>
+                        <th>poliklinik</th>
+                        <th>Diagnosa</th>
+                        <th>Penanganan</th>
+                        <th>Pembayaran</th>
+                        <th colspan="3" class="text-center ">Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if rjs|length > 0 %}
+                    {% for rj in rjs %}
+                    <tr>
+                        <td>{{rj.no_antri}}</td>
+                        <td>{{ rj.id_pasien }}</td>
+                        <td>{{ rj.id_dokter }}</td>
+                        <td>{{ rj.tgl_kunjungan }}</td>
+                        <td>{{ rj.poliklinik}}</td>
+                        <td>{{ rj.diagnosia}}</td>
+                        <td>{{ rj.penanganan}}</td>
+                        <td>{{ rj.pembayaran}}</td>
+                        <td><a class="btn btn-info" href="/pasien/detail/{{pasien.no_rekam_medis}}"
+                                role="button">Detail</a></td>
+                        <td><a class="btn btn-danger" href="/pasien/delete/{{pasien.no_rekam_medis}}"
+                                role="button">Delete</a></td>
+                        <td> <a class="btn btn-primary" href="/pasien/update/{{pasien.no_rekam_medis}}"
+                                role="button">Edit</a></td>>
+
+                        <!--<td><a href="/order/cancel/{{ order.no }}">cancel</a></td>-->
+                        <!--<td>{% if order.customer_name == user %}<a href="/order/cancel/{{ order.no }}">cancel</a>{% endif %}</td>-->
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td colspan="6"><i>Tidak ada</i></td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-md-1 mt-2">
+            <div class="text-right">
+                <a href="/rawat_jalan/new" class="btn btn-sm btn-success">Add Data</a>
+            </div>
+        </div>
+    </div>
+</div>
