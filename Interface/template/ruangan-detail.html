@@ -1,0 +1,29 @@
+<div class="container" style="margin-top:20px">
+    <h1 class="text-center">Ruangan</h1>
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <form method="get">
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="kode"><b>Kode Ruangan</b></label>
+                            <input type="text" id="kode" name="kode" class="form-control" value="{{ruangan.kode}}" disabled>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="kode"><b>Kasifikasi Ruangan</b></label>
+                            <input type="text" id="klasifikasi" name="klasifikasi" class="form-control" value="{{ruangan.klasifikasi}}" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 offset-md-8">
+                        <input class="btn btn-primary btn-block" type="submit" value="Create">
+                    </div>
+                </div>
+                <input type="hidden" name="action" value="place-order">
+            </form>
+        </div>
+    </div>
+</div>
