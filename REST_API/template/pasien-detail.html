@@ -1,0 +1,61 @@
+<div class="container" style="margin-top:20px">
+  <h1 class="text-center">Pasien</h1>
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <form method="get">
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="customer"><b>Nama Pasien</b></label>
+              <input type="text" id="nama" name="nama" class="form-control" value="{{pasien.nama}}" disabled>
+            </div>
+            <div class="form-group">
+              <label for="customer"><b>Jenis Kelamin</b></label>
+              <input type="text" id="jenis_kelamin" name="jenis_kelamin" class="form-control"
+                value="{{pasien.jenis_kelamin}}" disabled>
+            </div>
+            <div class="form-group">
+              <label for="phone"><b>Usia</b></label>
+              <input type="text" id="usia" name="usia" class="form-control" value="{{pasien.usia}}" disabled>
+            </div>
+            <div class="form-group">
+              <label for="phone"><b>Agama</b></label>
+              <input type="text" id="agama" name="agama" class="form-control" value="{{pasien.agama}}" disabled>
+            </div>
+          </div>
+          <div class="col-md-6 border-left">
+            <div class="form-group">
+              <label for="phone"><b>Pekerjaan</b></label>
+              <input type="text" id="pekerjaan" name="pekerjaan" class="form-control" value="{{pasien.pekerjaan}}"
+                disabled>
+            </div>
+            <div class="form-group">
+              <label for="phone"><b>Alamat</b></label>
+              <input type="text" id="alamat" name="alamat" class="form-control" value="{{pasien.alamat}}"
+                disabled>
+            </div>
+
+            <div class="form-group">
+              <label for="phone"><b>Golongan Darah</b></label>
+              <input type="text" id="golongan_darah" name="golongan_darah" class="form-control"
+                value="{{pasien.golongan_darah}}" disabled>
+            </div>
+
+            <div class="form-group">
+              <label for="phone"><b>No Telepon</b></label>
+              <input type="text" id="no_telepon" name="no_telepon" class="form-control" value="{{pasien.no_telepon}}"
+                disabled>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10 offset-md-1 mt-2">
+      <div class="text-right">
+        <a href="/pasien/update/{{pasien.no_rekam_medis}}" class="btn btn-sm btn-success">Ubah Data Pasien</a>
+      </div>
+    </div>
+  </div>
+</div>
