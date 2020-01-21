@@ -1,0 +1,51 @@
+<div class="container" style="margin-top:20px">
+    <h1 class="text-center">Dokter</h1>
+    <h3 class="text-center">Create New Dokter</h3>
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <form method="post" action="/dokter/new">
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="nama"><b>Dokter Name*</b></label>
+                            <input type="text" id="nama" name="nama" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="nama"><b>Spesialis*</b></label>
+                            <input type="text" id="spesialis" name="spesialis" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="no_telepon"><b>No. Telepon*</b></label>
+                            <input type="text" id="no_telepon" name="no_telepon" class="form-control" value="">
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6">
+                       
+                        <div class="form-group">
+                            <label for="alamat"><b>Alamat*</b></label>
+                            <input type="text" id="alamat" name="alamat" class="form-control" value="">
+                        </div>
+                        <label><b>Jenis Kelamin:</b></label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="gender_male" value="Pria">
+                            <label class="form-check-label" for="gender_male">Laki-laki</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="jenis_kelamin" id="gender_female" value="Perempuan">
+                            <label class="form-check-label" for="gender_female">Perempuan</label>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 offset-md-8">
+                        <input class="btn btn-primary btn-block" type="submit" value="Create">
+                    </div>
+                </div>
+                <input type="hidden" name="action" value="place-order">
+            </form>
+        </div>
+    </div>
+</div>
